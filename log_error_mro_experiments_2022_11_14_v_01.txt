@@ -1,0 +1,313 @@
+Traceback (most recent call last):
+  File "facility/plots.py", line 14, in <module>                                                                          
+    dftemp = pd.read_csv(foldername+'df.csv')                                                                             
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\pandas\io\parsers.py", line 605, in read_csv
+    return _read(filepath_or_buffer, kwds)                                                                                
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\pandas\io\parsers.py", line 457, in _read   
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\pandas\io\parsers.py", line 814, in __init__
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\pandas\io\parsers.py", line 1045, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\pandas\io\parsers.py", line 1862, in __init__
+    self._open_handles(src, kwds)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\pandas\io\parsers.py", line 1357, in _open_handles
+    self.handles = get_handle(
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\pandas\io\common.py", line 639, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'facility/df.csv'
+(env) PS C:\Users\Monash\PycharmProjects\mro_experiments> ^C
+(env) PS C:\Users\Monash\PycharmProjects\mro_experiments> python facility/facility.py --foldername facility/
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+exception calling callback for <Future at 0x21e2a1b7670 state=finished raised BrokenProcessPool>
+joblib.externals.loky.process_executor._RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 618, in wait_result_broken_or_wakeup
+    result_item = result_reader.recv()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\multiprocessing\connection.py", line 251, in recv
+    return _ForkingPickler.loads(buf.getbuffer())
+TypeError: __init__() missing 1 required positional argument: 'msg'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 385, in __call__
+    self.parallel.dispatch_next()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 834, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 556, in apply_async
+    future = self._workers.submit(SafeFunction(func))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 176, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 1129, in submit
+    raise self._flags.broken
+joblib.externals.loky.process_executor.BrokenProcessPool: A result has failed to un-serialize. Please ensure that the objects returned by the function are always picklable.        
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 618, in wait_result_broken_or_wakeup
+    result_item = result_reader.recv()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\multiprocessing\connection.py", line 251, in recv
+    return _ForkingPickler.loads(buf.getbuffer())
+TypeError: __init__() missing 1 required positional argument: 'msg'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "facility/facility.py", line 377, in <module>
+    results = Parallel(n_jobs=njobs)(
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 1098, in __call__
+    self.retrieve()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 975, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 567, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 385, in __call__
+    self.parallel.dispatch_next()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 834, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+    self._dispatch(tasks)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 556, in apply_async
+    future = self._workers.submit(SafeFunction(func))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 176, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 1129, in submit
+    raise self._flags.broken
+joblib.externals.loky.process_executor.BrokenProcessPool: A result has failed to un-serialize. Please ensure that the objects returned by the function are always picklable.        
+(env) PS C:\Users\Monash\PycharmProjects\mro_experiments> python facility/facility.py --foldername facility/
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+exception calling callback for <Future at 0x26b3eae7670 state=finished raised BrokenProcessPool>
+joblib.externals.loky.process_executor._RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 618, in wait_result_broken_or_wakeup
+    result_item = result_reader.recv()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\multiprocessing\connection.py", line 251, in recv
+    return _ForkingPickler.loads(buf.getbuffer())
+TypeError: __init__() missing 1 required positional argument: 'msg'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 385, in __call__
+    self.parallel.dispatch_next()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 834, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 556, in apply_async
+    future = self._workers.submit(SafeFunction(func))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 176, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 1129, in submit
+    raise self._flags.broken
+joblib.externals.loky.process_executor.BrokenProcessPool: A result has failed to un-serialize. Please ensure that the objects returned by the function are always picklable.        
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 618, in wait_result_broken_or_wakeup
+    result_item = result_reader.recv()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\multiprocessing\connection.py", line 251, in recv
+    return _ForkingPickler.loads(buf.getbuffer())
+TypeError: __init__() missing 1 required positional argument: 'msg'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "facility/facility.py", line 377, in <module>
+    results = Parallel(n_jobs=njobs)(
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 1098, in __call__
+    self.retrieve()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 975, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 567, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 385, in __call__
+    self.parallel.dispatch_next()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 834, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+(env) PS C:\Users\Monash\PycharmProjects\mro_experiments> python facility/facility.py --foldername facility/
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+exception calling callback for <Future at 0x19b491e7670 state=finished raised BrokenProcessPool>
+joblib.externals.loky.process_executor._RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 618, in wait_result_broken_or_wakeup
+    result_item = result_reader.recv()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\multiprocessing\connection.py", line 251, in recv
+    return _ForkingPickler.loads(buf.getbuffer())
+TypeError: __init__() missing 1 required positional argument: 'msg'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 385, in __call__
+    self.parallel.dispatch_next()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 834, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 556, in apply_async
+    future = self._workers.submit(SafeFunction(func))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 176, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 1129, in submit
+    raise self._flags.broken
+joblib.externals.loky.process_executor.BrokenProcessPool: A result has failed to un-serialize. Please ensure that the objects returned by the function are always picklable.        
+C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\cvxpy\reductions\solvers\solving_chain.py:178: UserWarning: You are solving a parameterized problem that is no
+t DPP. Because the problem is not DPP, subsequent solves will not be faster than the first one. For more information, see the documentation on Discplined Parametrized Programming, 
+at
+        https://www.cvxpy.org/tutorial/advanced/index.html#disciplined-parametrized-programming
+  warnings.warn(dpp_error_msg)
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 618, in wait_result_broken_or_wakeup
+    result_item = result_reader.recv()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\multiprocessing\connection.py", line 251, in recv
+    return _ForkingPickler.loads(buf.getbuffer())
+TypeError: __init__() missing 1 required positional argument: 'msg'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "facility/facility.py", line 377, in <module>
+    results = Parallel(n_jobs=njobs)(
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 1098, in __call__
+    self.retrieve()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 975, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 567, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\_base.py", line 439, in result
+    return self.__get_result()
+  File "C:\Users\Monash\AppData\Local\Programs\Python\Python38\lib\concurrent\futures\_base.py", line 388, in __get_result
+    raise self._exception
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\_base.py", line 26, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 385, in __call__
+    self.parallel.dispatch_next()
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 834, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\_parallel_backends.py", line 556, in apply_async
+    future = self._workers.submit(SafeFunction(func))
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\reusable_executor.py", line 176, in submit
+    return super().submit(fn, *args, **kwargs)
+  File "C:\Users\Monash\PycharmProjects\mro_experiments\env\lib\site-packages\joblib\externals\loky\process_executor.py", line 1129, in submit
+    raise self._flags.broken
+joblib.externals.loky.process_executor.BrokenProcessPool: A result has failed to un-serialize. Please ensure that the objects returned by the function are always picklable. 
